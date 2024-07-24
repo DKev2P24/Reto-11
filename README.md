@@ -1,5 +1,5 @@
 # Reto-11
-## Suma Resta de Matrices
+## Suma/Resta de Matrices
 ```python
 def mts1(p, z):
     m1 = []
