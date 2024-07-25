@@ -110,5 +110,26 @@ if __name__ == "__main__":
     print("Matriz Producto:")
     im(mat4)
 ```
+## Matriz Transpuesta
+```python
+def m(m,n):
+    k = []
+    for i in range(m):
+        l = []
+        for j in range(n):
+            mx = int(input(F"Coordenada F({j+1},{i+1})C: "))
+            l.append(mx)
+        k.append(l)
+    return k
 
+def z(m):
+    for i in range(len(m)) :
+         print(m[i])
+
+if __name__ == "__main__":
+    f = int(input("columnas: "))
+    c = int(input("filas: "))
+    ko = m(f,c)
+    z(ko)
+```
 
