@@ -132,7 +132,7 @@ if __name__ == "__main__":
     ko = m(f,c)
     z(ko)
 ```
-## Suma de Columna Dada
+## Suma de Columna 
 ```python
 def m(m,n):
     k = []
@@ -164,7 +164,7 @@ if __name__ == "__main__":
     l(mt)
     print(f"Suma de columna: {r}")
 ```
-## Suma de Filas
+## Suma de Fila
 ```python
 def m(m,n):
     k = []
