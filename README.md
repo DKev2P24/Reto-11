@@ -132,4 +132,67 @@ if __name__ == "__main__":
     ko = m(f,c)
     z(ko)
 ```
+## Suma de Columna Dada
+```python
+def m(m,n):
+    k = []
+    for i in range(m):
+        l = []
+        for j in range(n):
+            mx = int(input(F"Coordenada F({i+1},{j+1})C: "))
+            l.append(mx)
+        k.append(l)
+    return k
 
+def k(n,o):
+    p = 0
+    for i in n:
+         p += i[o]
+    return p
+
+def l(m):
+    for i in m:
+     print(i)
+
+if __name__ == "__main__":
+    f = int(input("Columnas:: "))
+    c = int(input("Filas: "))
+    a = int(input("Columna a sumar: ")) - 1
+    mt = m(c,f)
+    r = k(mt,a)
+    print("Matriz:")
+    l(mt)
+    print(f"Suma de columna: {r}")
+```
+## Suma de Filas
+```python
+def m(m,n):
+    k = []
+    for i in range(m):
+        l = []
+        for j in range(n):
+            mx = int(input(F"Coordenada F({i+1},{j+1})C: "))
+            l.append(mx)
+        k.append(l)
+    return k
+
+def k(n,o):
+    p = 0
+    for i in n[o]:
+        p += i
+    return p
+        
+def l(m):
+    for i in m:
+     print(i)
+
+if __name__ == "__main__":
+    f = int(input("Columnas: "))
+    c = int(input("Filas: "))
+    a = int(input("Fila a sumar: ")) - 1
+    mt = m(c,f)
+    r = k(mt,a)
+    print("Matriz:")
+    l(mt)
+    print(f"Suma de Fila: {r}")
+```
