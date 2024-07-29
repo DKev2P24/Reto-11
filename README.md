@@ -117,19 +117,19 @@ def m(m,n):
     for i in range(m):
         l = []
         for j in range(n):
-            mx = int(input(F"Coordenada F({j+1},{i+1})C: "))
+            mx = int(input(F"Coordenada F({j+1},{i+1})C: ")) # se intercambian las posiciones de "i" y "j"
             l.append(mx)
         k.append(l)
     return k
 
 def z(m):
-    for i in range(len(m)) :
-         print(m[i])
+    for i in range(len(m)) 
+         print(m[i]) # se imprime cada elemneto para cambiar la apariencia respecto a la matriz original
 
 if __name__ == "__main__":
-    f = int(input("columnas: "))
+    f = int(input("columnas: ")) # se ingresan los datos de la matriz
     c = int(input("filas: "))
-    ko = m(f,c)
+    ko = m(f,c) # se llaman a las funciones de operacion y de apariencia
     z(ko)
 ```
 ## Suma de Columna 
@@ -139,28 +139,28 @@ def m(m,n):
     for i in range(m):
         l = []
         for j in range(n):
-            mx = int(input(F"Coordenada F({i+1},{j+1})C: "))
+            mx = int(input(F"Coordenada F({i+1},{j+1})C: ")) 
             l.append(mx)
         k.append(l)
     return k
 
-def k(n,o):
+def k(n,o): # funcion que separa los valores de columna indicada, del resto de la matriz
     p = 0
     for i in n:
          p += i[o]
-    return p
+    return p # regresa una lista con los valores de columna
 
 def l(m):
     for i in m:
-     print(i)
+     print(i) 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # se llaman las funciones de ingreso de valores 
     f = int(input("Columnas:: "))
     c = int(input("Filas: "))
     a = int(input("Columna a sumar: ")) - 1
-    mt = m(c,f)
+    mt = m(c,f) # se llaman las funciones de operacion
     r = k(mt,a)
-    print("Matriz:")
+    print("Matriz:") # se imprimen los resultados
     l(mt)
     print(f"Suma de columna: {r}")
 ```
