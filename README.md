@@ -4,7 +4,7 @@
 def mts1(p, z): # Funcion que genera la primera matriz
     m1 = []     # lista que acumula los valores de filas y columnas
     for i in range(p):   # recorrer dentro de los valores dados
-        f1 = []
+        f1 = [] 
         for j in range(z):
             fp = int(input(f"Introduce la coordenada A{i + 1},{j + 1}: ")) # se solicitan los valores de la matriz
             f1.append(fp) # se agregan los valores ingresados a una lista
@@ -41,18 +41,18 @@ def rest(p, z):
         m.append(t)
     return m
 
-def im(x):
-    for i in x:
-        print(i)
+def im(x): # Funcion Muestra Matriz
+    for i in x:  
+        print(i)  # Imprime cada fila ordenada de la matriz
         
 if __name__ == "__main__":
     f = int(input("Filas: "))
-    c = int(input("Columnas: "))
+    c = int(input("Columnas: ")) # Entrada de Valores de las Matrices
     mat1 = mts1(f, c)
-    mat2 = mts2(f, c)
+    mat2 = mts2(f, c) # se llaman a las funciones de Matrices
     mat3 = sum(mat1, mat2)
-    mat4 = rest(mat1, mat2)
-    print("Matriz 1:",)
+    mat4 = rest(mat1, mat2) # se llaman a las funciones operadoras de matrices
+    print("Matriz 1:",) # se imprimen las matrices ingresadas y sus respectivas operaciones entre ellas
     im(mat1)
     print("Matriz 2:")
     im(mat2)
@@ -63,7 +63,7 @@ if __name__ == "__main__":
 ```
 ## Producto matrices
 ```python
-def mts1(p, z):
+def mts1(p, z): 
     m1 = []
     for i in range(p):
         f1 = []
