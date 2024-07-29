@@ -21,15 +21,15 @@ def mts2(p, z):
         m2.append(f1)
     return m2
 
-def sum(p, z): # Funcion que opera las matrices ingresadas
-    m = [] # lista que acumula los valores de la suma
-    for i in range(len(p)): # recorre las filas de las matrices
-        t = [] # lista para almacenar las filas
-        for j in range(len(p)): # se recorre las columnas de las matrices
-            v = p[i][j] + z[i][j] # se opera cada elemento de cada fila y columna
-            t.append(v) # se agregan a la lista los valores de las filas
-        m.append(t) # se agregan los valores a la matriz
-    return m # entrega la matriz
+def sum(p, z):         # Funcion que opera las matrices ingresadas
+    m = []      # lista que acumula los valores de la suma
+    for i in range(len(p)):      # recorre las filas de las matrices
+        t = []       # lista para almacenar las filas
+        for j in range(len(p)):      # se recorre las columnas de las matrices
+            v = p[i][j] + z[i][j]      # se opera cada elemento de cada fila y columna
+            t.append(v)      # se agregan a la lista los valores de las filas
+        m.append(t)        # se agregan los valores a la matriz
+    return m        # entrega la matriz
 
 def rest(p, z):
     m = []
