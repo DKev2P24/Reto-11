@@ -6,12 +6,12 @@ def mts1(p, z): # Funcion que genera la primera matriz
     for i in range(p):   # recorrer dentro de los valores dados
         f1 = []
         for j in range(z):
-            fp = int(input(f"Introduce la coordenada A{i + 1},{j + 1}: ")) #
-            f1.append(fp)
-        m1.append(f1)
-    return m1
+            fp = int(input(f"Introduce la coordenada A{i + 1},{j + 1}: ")) # se solicitan los valores de la matriz
+            f1.append(fp) # se agregan los valores ingresados a una lista
+        m1.append(f1) # se agrega una lista a otra lista 
+    return m1 # entrega la matriz 1
 
-def mts2(p, z):
+def mts2(p, z): 
     m2 = []
     for i in range(p):
         f1 = []
@@ -21,15 +21,15 @@ def mts2(p, z):
         m2.append(f1)
     return m2
 
-def sum(p, z):
-    m = []
-    for i in range(len(p)):
-        t = []
-        for j in range(len(p)):
-            v = p[i][j] + z[i][j]
-            t.append(v)
-        m.append(t)
-    return m
+def sum(p, z): # Funcion que opera las matrices ingresadas
+    m = [] # lista que acumula los valores de la suma
+    for i in range(len(p)): # recorre las filas de las matrices
+        t = [] # lista para almacenar las filas
+        for j in range(len(p)): # se recorre las columnas de las matrices
+            v = p[i][j] + z[i][j] # se opera cada elemento de cada fila y columna
+            t.append(v) # se agregan a la lista los valores de las filas
+        m.append(t) # se agregan los valores a la matriz
+    return m # entrega la matriz
 
 def rest(p, z):
     m = []
