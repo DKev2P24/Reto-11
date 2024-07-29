@@ -1,12 +1,12 @@
 # Reto-11
 ## Suma/Resta de Matrices
 ```python
-def mts1(p, z):
-    m1 = []
-    for i in range(p):
+def mts1(p, z): # Funcion que genera la primera matriz
+    m1 = []     # lista que acumula los valores de filas y columnas
+    for i in range(p):   # recorrer dentro de los valores dados
         f1 = []
         for j in range(z):
-            fp = int(input(f"Introduce la coordenada A{i + 1},{j + 1}: "))
+            fp = int(input(f"Introduce la coordenada A{i + 1},{j + 1}: ")) #
             f1.append(fp)
         m1.append(f1)
     return m1
