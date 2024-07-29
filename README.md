@@ -61,9 +61,9 @@ if __name__ == "__main__":
     print("Matriz Retsa:")
     im(mat4)
 ```
-## Producto matrices
+## Producto de matrices
 ```python
-def mts1(p, z): 
+def mts1(p, z): # se genera la matriz 1
     m1 = []
     for i in range(p):
         f1 = []
@@ -73,7 +73,7 @@ def mts1(p, z):
         m1.append(f1)
     return m1
 
-def mts2(p, z):
+def mts2(p, z): # se genera la matriz 2
     m2 = []
     for i in range(p):
         f1 = []
@@ -83,15 +83,15 @@ def mts2(p, z):
         m2.append(f1)
     return m2
 
-def m(p, z):
-    m = []
-    for i in range(len(p)):
-        t = []
-        for j in range(len(p)):
-            v = p[i][j] * z[i][j]
-            t.append(v)
-        m.append(t)
-    return m
+def m(p, z):  # funcion que opera las matrices
+    m = [] # se acumulan los valores
+    for i in range(len(p)): # se recorre cada elemento 
+        t = [] # se acumulan las filas 
+        for j in range(len(p)): # se recorre cada elemento  
+            v = p[i][j] * z[i][j] se opera cada elemnto de cada fila y columna 
+            t.append(v) # se agrega la lista
+        m.append(t) # se agrega la lista y consolida la matriz
+    return m # regresa la matriz producto
 
 def im(x):
     for i in x:
