@@ -11,12 +11,13 @@ def mts1(p, z): # Funcion que genera la primera matriz
         m1.append(f1) # se agrega una lista a otra lista 
     return m1 # entrega la matriz 1
 
-def mts2(p, z): 
+def mts2(p, z): # Funcion que genera la segunda matriz
     m2 = []
     for i in range(p):
         f1 = []
         for j in range(z):
-            fp = int(input(f"Introduce la componente B{i + 1},{j + 1}: "))
+            fp = int(input(f"Introduce la componente B{i + 1},{j + 1}: ")) # se solicitan los valores de la segunda matriz
+            f1.append(fp)
             f1.append(fp)
         m2.append(f1)
     return m2
@@ -31,15 +32,15 @@ def sum(p, z):         # Funcion que opera las matrices ingresadas
         m.append(t)        # se agregan los valores a la matriz
     return m        # entrega la matriz
 
-def rest(p, z):
-    m = []
-    for i in range(len(p)):
-        t = []
-        for j in range(len(p)):
-            v = p[i][j] - z[i][j]
-            t.append(v)
-        m.append(t)
-    return m
+def rest(p, z):     # Funcion que resta las matrices ingresadas
+    m = []      # lista que acumula los valores de la resta
+    for i in range(len(p)):      # recorre las filas de las matrices
+        t = []       # lista para almacenar las filas
+        for j in range(len(p[i])):      # se recorre las columnas de las matrices
+            v = p[i][j] - z[i][j]      # se resta cada elemento de cada fila y columna
+            t.append(v)      # se agregan a la lista los valores de las filas
+        m.append(t)        # se agregan los valores a la matriz
+    return m        # entrega la matriz resta
 
 def im(x): # Funcion Muestra Matriz
     for i in x:  
@@ -83,32 +84,32 @@ def mts2(p, z): # se genera la matriz 2
         m2.append(f1)
     return m2
 
-def m(p, z):  # funcion que opera las matrices
-    m = [] # se acumulan los valores
-    for i in range(len(p)): # se recorre cada elemento 
+def m(p, z):   # funcion que opera las matrices para multiplicarlas
+    m = []  # se acumulan los valores
+    for i in range(len(p)):  # se recorre cada elemento 
         t = [] # se acumulan las filas 
-        for j in range(len(p)): # se recorre cada elemento  
-            v = p[i][j] * z[i][j] se opera cada elemnto de cada fila y columna 
-            t.append(v) # se agrega la lista
-        m.append(t) # se agrega la lista y consolida la matriz
-    return m # regresa la matriz producto
+        for j in range(len(p[i])):  # se recorre cada elemento  
+            v = p[i][j] * z[i][j]  # se multiplica cada elemento de cada fila y columna 
+            t.append(v)  # se agregan los valores a la lista de filas
+        m.append(t)  # se agregan los valores a la matriz
+    return m  # regresa la matriz producto
 
-def im(x):
+def im(x): # Funcion Muestra Matriz
     for i in x:
-        print(i)
+        print(i)  # Imprime cada fila ordenada de la matriz
         
 if __name__ == "__main__":
     f = int(input("Filas: "))
     c = int(input("Columnas: "))
     mat1 = mts1(f, c)
     mat2 = mts2(f, c)
-    mat4 = m(mat1, mat2)
-    print("Matriz 1:",)
+    mat4 = m(mat1, mat2) # se llama a la funcion de producto de matrices
+    print("Matriz 1:")
     im(mat1)
     print("Matriz 2:")
     im(mat2)
     print("Matriz Producto:")
-    im(mat4)
+    im(mat4) # se imprime la matriz resultado del producto
 ```
 ## Matriz Transpuesta
 ```python
@@ -122,15 +123,15 @@ def m(m,n):
         k.append(l)
     return k
 
-def z(m):
-    for i in range(len(m)) 
-         print(m[i]) # se imprime cada elemneto para cambiar la apariencia respecto a la matriz original
+def z(m): # funcion que imprime la matriz transpuesta
+    for i in range(len(m)): 
+         print(m[i]) # se imprime cada fila para cambiar la apariencia respecto a la matriz original
 
 if __name__ == "__main__":
-    f = int(input("columnas: ")) # se ingresan los datos de la matriz
-    c = int(input("filas: "))
-    ko = m(f,c) # se llaman a las funciones de operacion y de apariencia
-    z(ko)
+    f = int(input("Columnas: ")) # se ingresan los datos de la matriz
+    c = int(input("Filas: "))
+    ko = m(f,c) # se llama a la funcion de transposicion
+    z(ko) # se imprime la matriz transpuesta
 ```
 ## Suma de Columna 
 ```python
@@ -150,23 +151,23 @@ def k(n,o): # funcion que separa los valores de columna indicada, del resto de l
          p += i[o]
     return p # regresa una lista con los valores de columna
 
-def l(m):
+def l(m): # funcion que imprime la matriz
     for i in m:
      print(i) 
 
-if __name__ == "__main__": # se llaman las funciones de ingreso de valores 
-    f = int(input("Columnas:: "))
+if __name__ == "__main__": 
+    f = int(input("Columnas: ")) # se ingresan los datos de la matriz
     c = int(input("Filas: "))
-    a = int(input("Columna a sumar: ")) - 1
-    mt = m(c,f) # se llaman las funciones de operacion
-    r = k(mt,a)
-    print("Matriz:") # se imprimen los resultados
-    l(mt)
-    print(f"Suma de columna: {r}")
+    a = int(input("Columna a sumar: ")) - 1 # se solicita la columna a sumar
+    mt = m(c,f) # se llama a la funcion de generacion de matriz
+    r = k(mt,a) # se llama a la funcion que suma la columna
+    print("Matriz:") 
+    l(mt) # se imprime la matriz
+    print(f"Suma de columna: {r}") # se imprime la suma de la columna
 ```
 ## Suma de Fila
 ```python
-def m(m,n):
+def m(m,n): # funcion que genera la matriz
     k = []
     for i in range(m):
         l = []
@@ -176,23 +177,23 @@ def m(m,n):
         k.append(l)
     return k
 
-def k(n,o):
+def k(n,o): # funcion que separa los valores de la fila indicada, del resto de la matriz
     p = 0
     for i in n[o]:
         p += i
-    return p
+    return p # regresa la suma de los valores de la fila
         
-def l(m):
+def l(m): # funcion que imprime la matriz
     for i in m:
      print(i)
 
 if __name__ == "__main__":
-    f = int(input("Columnas: "))
+    f = int(input("Columnas: ")) # se ingresan los datos de la matriz
     c = int(input("Filas: "))
-    a = int(input("Fila a sumar: ")) - 1
-    mt = m(c,f)
-    r = k(mt,a)
+    a = int(input("Fila a sumar: ")) - 1 # se solicita la fila a sumar
+    mt = m(c,f) # se llama a la funcion de generacion de matriz
+    r = k(mt,a) # se llama a la funcion que suma la fila
     print("Matriz:")
-    l(mt)
-    print(f"Suma de Fila: {r}")
+    l(mt) # se imprime la matriz
+    print(f"Suma de Fila: {r}") # se imprime la suma de la fila
 ```
